@@ -7,7 +7,7 @@
   <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
   <meta name="author" content="GeeksLabs">
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="shortcut icon" href="{{ asset('img/admin/favicon.png') }}">
 
   <title> @yield('title') </title>
 
@@ -117,83 +117,88 @@
     <aside>
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
+        
         <ul class="sidebar-menu">
-          <li class="active">
-            <a class="" href="{{ url('admin/') }}">
-                          <i class="icon_house_alt"></i>
-                          <span>Home</span>
-                      </a>
+          <li class="{{ Request::is('admin') ? 'active' : 'sub-menu' }}"> 
+            <a class="" href="{{ url('admin') }}">
+                <i class="icon_house_alt"></i>
+                <span>Home</span>
+            </a>
           </li>
 
-          <li class="sub-menu">
+          <li class="{{ Request::is('admin/comunicados-oficiais') ? 'active' : 'sub-menu' }}"> 
             <a href="{{ url('admin/comunicados-oficiais') }}" class="">
-                          <i class="icon_documents_alt"></i>
-                          <span>Comunicados ofc</span>
-                      </a>
+                <i class="icon_chat_alt"></i>
+                <span>Comunicados</span>
+            </a>
           </li>
 
           <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Forms</span>
+                          <i class="icon_calendar"></i>
+                          <span>Calendários</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="form_component.html">Form Elements</a></li>
-              <li><a class="" href="form_validation.html">Form Validation</a></li>
+              <li><a class="{{ Request::is('admin/provas') ? 'active' : '' }}" href="{{ url('admin/provas') }}">Provas</a></li>
+              <li><a class="{{ Request::is('admin/eventos') ? 'active' : '' }}" href="{{ url('admin/eventps') }}"><span>Eventos</span></a></li>
             </ul>
           </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
-                          <span>UI Fitures</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="general.html">Elements</a></li>
-              <li><a class="" href="buttons.html">Buttons</a></li>
-              <li><a class="" href="grids.html">Grids</a></li>
-            </ul>
-          </li>
-          <li>
-            <a class="" href="widgets.html">
-                          <i class="icon_genius"></i>
-                          <span>Widgets</span>
-                      </a>
-          </li>
-          <li>
-            <a class="" href="chart-chartjs.html">
-                          <i class="icon_piechart"></i>
-                          <span>Charts</span>
-
-                      </a>
-
+          
+          <li class="{{ Request::is('admin/carrossel') ? 'active' : 'sub-menu' }}"> 
+            <a href="{{ url('admin/carrossel') }}" class="">
+                <i class="icon_images"></i>
+                <span>Carrossel</span>
+            </a>
           </li>
 
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_table"></i>
-                          <span>Tables</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="basic_table.html">Basic Table</a></li>
-            </ul>
+          <li class="{{ Request::is('admin/contatos') ? 'active' : 'sub-menu' }}"> 
+            <a href="{{ url('admin/contatos') }}" class="">
+                <i class="icon_phone"></i>
+                <span>Contatos</span>
+            </a>
           </li>
 
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_documents_alt"></i>
-                          <span>Pages</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="profile.html">Profile</a></li>
-              <li><a class="" href="login.html"><span>Login Page</span></a></li>
-              <li><a class="" href="contact.html"><span>Contact Page</span></a></li>
-              <li><a class="" href="blank.html">Blank Page</a></li>
-              <li><a class="" href="404.html">404 Error</a></li>
-            </ul>
+          <li class="{{ Request::is('admin/equipe') ? 'active' : 'sub-menu' }}"> 
+            <a href="{{ url('admin/equipe') }}" class="">
+                <i class="icon_group"></i>
+                <span>Equipe</span>
+            </a>
+          </li>
+
+          <li class="{{ Request::is('admin/depoimentos') ? 'active' : 'sub-menu' }}"> 
+            <a href="{{ url('admin/depoimentos') }}" class="">
+                <i class="icon_quotations_alt"></i>
+                <span>Depoimentos</span>
+            </a>
+          </li>
+
+          <li class="{{ Request::is('admin/avaliacoes') ? 'active' : 'sub-menu' }}"> 
+            <a href="{{ url('admin/avaliacoes') }}" class="">
+                <i class="icon_like_alt"></i>
+                <span>Avaliações</span>
+            </a>
+          </li>
+
+          <li class="{{ Request::is('admin/faq') ? 'active' : 'sub-menu' }}"> 
+            <a href="{{ url('admin/faq') }}" class="">
+                <i class="icon_question_alt"></i>
+                <span>FAQ</span>
+            </a>
+          </li>
+
+          <li class="{{ Request::is('admin/precos') ? 'active' : 'sub-menu' }}"> 
+            <a href="{{ url('admin/precos') }}" class="">
+                <i class="icon_currency_alt"></i>
+                <span>Preços</span>
+            </a>
+          </li>
+          
+          <li class="{{ Request::is('admin/curriculos') ? 'active' : 'sub-menu' }}"> 
+            <a href="{{ url('admin/curriculos') }}" class="">
+                <i class="icon_documents_alt"></i>
+                <span>Currículos</span>
+            </a>
           </li>
 
         </ul>
@@ -210,7 +215,7 @@
           <div class="col-lg-12">
             <h3 class="page-header">@yield('place')</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i>Home</li>
               <li>@yield('place')</li>
             </ol>
           </div>

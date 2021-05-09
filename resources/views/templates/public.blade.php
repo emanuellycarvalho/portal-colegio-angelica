@@ -5,29 +5,29 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Home</title>
+  <title>@yield('title')</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ url('img/public/favicon.png') }}" rel="icon">
+  <link href="{{ url('img/public/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{{ asset('assets/public/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/public/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/public/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/public/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/public/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/public/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/public/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/public/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{{ asset('assets/public/css/style.css') }}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Medicio - v4.1.0
@@ -55,16 +55,16 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <a href="index.html" class="logo me-auto"><img src="assets/img/logo-texto-lateral.jpg" alt="Logo"></a>
+      <a href="index.html" class="logo me-auto"><img src="{{ asset('img/public/logo-texto-lateral.jpg') }}" alt="Logo"></a>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="sobre-nos.html">Sobre nós</a></li>
-          <li><a class="nav-link scrollto" href="">Calendário</a></li>
-          <li><a class="nav-link scrollto" href="capela-online.html">Capela Online</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/') }}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/sobre-nos') }}">Sobre nós</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/calendario') }}">Calendário</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/capela-online') }}">Capela Online</a></li>
           <li class="dropdown"><a href="#"><span>Ensino</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <!-- <li><a href="#">Drop Down 1</a></li>
@@ -77,11 +77,11 @@
                   <li><a href="#">Deep Drop Down 5</a></li>
                 </ul>
               </li> -->
-              <li><a href="#">Ensino Infantil</a></li>
-              <li><a href="#">Ensino Fundamental I</a></li>
-              <li><a href="#">Ensino Fundamental II</a></li>
-              <li><a href="#">Ensino Médio</a></li>
-              <li><a href="#">Técnico</a></li>
+              <li><a href="{{ url('/ei') }}">Ensino Infantil</a></li>
+              <li><a href="{{ url('/ef1') }}">Ensino Fundamental I</a></li>
+              <li><a href="{{ url('/ef2') }}">Ensino Fundamental II</a></li>
+              <li><a href="{{ url('/em') }}">Ensino Médio</a></li>
+              <li><a href="{{ url('/et') }}">Técnico</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Plataformas</span> <i class="bi bi-chevron-down"></i></a>
@@ -101,54 +101,7 @@
     </div>
   </header><!-- End Header -->
 
-  <section></section>
-
-  <main id="main">
-
-    <!-- ======= Capel Section ======= -->
-    <section id="capel" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Capela online</h2>
-          <p>Faça aqui seu pedido de oração.</p>
-        </div>
-
-      </div>
-
-      <div class="container">
-        <div class="row mt-5">
-          <div class="col-lg-12">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Nome*" required>
-                </div>
-                <div class="col form-group mt-3">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto*" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Mensagem*" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Enviando</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Seu pedido foi enviado.</div>
-              </div>
-              <div class="text-center"><button type="submit">Enviar pedido</button></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Capel Section -->
-
-  </main><!-- End #main -->
+    @yield('content')
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -225,15 +178,15 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="{{ asset('assets/public/vendor/aos/aos.js') }}"></script>
+  <script src="{{ asset('assets/public/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('assets/public/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ asset('assets/public/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ asset('assets/public/vendor/purecounter/purecounter.js') }}"></script>
+  <script src="{{ asset('assets/public/vendor/swiper/swiper-bundle.min.js') }}"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{ asset('assets/public/js/main.js') }}"></script>
 
 </body>
 

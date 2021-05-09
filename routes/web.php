@@ -14,8 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('public.index');
 });
+
+Route::get('/sobre-nos', function () {
+    return view('public.sobre-nos');
+});
+
 
 Route::get('/admin', function(){
     return view('admin.index');
@@ -23,4 +28,13 @@ Route::get('/admin', function(){
 
 Route::get('/admin/comunicados-oficiais', function(){
     return view('admin.comunicados-oficiais.index');  
+});
+
+Route::get('/admin/contatos', function(){
+    return view('admin.contatos.index');  
+});
+
+
+Route::get('/admin/equipe', function(){
+    return view('admin.equipe.index');  
 });
