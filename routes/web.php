@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('public.index');
 });
 
+Route::get('/working', function () {
+    return view('templates.working');
+});
+
 Route::get('/sobre-nos', function () {
     return view('public.sobre-nos');
 });

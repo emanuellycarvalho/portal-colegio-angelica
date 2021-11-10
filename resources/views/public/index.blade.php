@@ -1,6 +1,6 @@
 @extends('templates.public')
 
-@section('title') Home @endsection('title')
+@section('title') Portal Colégio Angélica @endsection('title')
 
 @section('content')
 
@@ -24,18 +24,18 @@
       <!-- Slide 2 -->
       <div class="carousel-item" style="background-image: url({{ asset('img/public/slide/slide-2.jpg') }})">
         <div class="container">
-          <h2>Manchete</h2>
-          <p>Resumo da notícia.</p>
-          <a href="#about" class="btn-get-started scrollto">Saiba mais</a>
+          <h2>Tem uma dúvida?</h2>
+          <p>Confira se sua pergunta já foi respondida no nosso FAQ!</p>
+          <a href="{{ url('/working') }}" class="btn-get-started scrollto">Abrir FAQ</a>
         </div>
       </div>
 
       <!-- Slide 3 -->
       <div class="carousel-item" style="background-image: url({{ asset('img/public/slide/slide-3.jpg') }})">
         <div class="container">
-          <h2>Manchete</h2>
-          <p>Resumo da notícia.</p>
-          <a href="#about" class="btn-get-started scrollto">Saiba mais</a>
+          <h2>Conheça o colégio!</h2>
+          <p>Veja imagens de nossas instalações.</p>
+          <a href="#gallery" class="btn-get-started scrollto">Ver galeria</a>
         </div>
       </div>
 
@@ -62,7 +62,7 @@
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bx bx-receipt"></i></div>
-            <h4 class="title"><a href="materiais.html">Materiais didáticos</a></h4>
+            <h4 class="title"><a href="{{ url('/working') }}">Materiais didáticos</a></h4>
             <p class="description">Confira a lista de materiais para o ano escolar que seu filho vai cursar.</p>
           </div>
         </div>
@@ -70,7 +70,7 @@
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="bx bx-cube-alt"></i></div>
-            <h4 class="title"><a target="_blank" href="">UNOi</a></h4>
+            <h4 class="title"><a target="_blank" href="#">UNOi</a></h4>
             <p class="description">Conheça a plataforma que usamos para o ensino online!</p>
           </div>
         </div>
@@ -78,7 +78,7 @@
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
             <div class="icon"><i class="bx bxs-images"></i></div>
-            <h4 class="title"><a href="">Conheça a escola</a></h4>
+            <h4 class="title"><a href="{{ url('/#gallery') }}">Conheça a escola</a></h4>
             <p class="description">Veja fotos dos espaços que a escola oferece para garantir a melhor experiência para os alunos!</p>
           </div>
         </div>
@@ -129,14 +129,27 @@
               <div class="info-box mt-4">
                 <i class="bx bx-envelope"></i>
                 <h3>Endereços de email</h3>
-                <p>info@example.com<br>contact@example.com</p>
+                <p><br>
+                  colegioangelica@colegioangelicamg.coms<br>
+                  administrativo@colegioangelicamg.coms<br>
+                  atendimento@colegioangelicamg.coms<br>
+                  financeiro@colegioangelicamg.coms<br>
+                  diretoria@colegioangelicamg.coms<br>
+                </p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="info-box mt-4">
                 <i class="bx bx-phone-call"></i>
                 <h3>Telefones</h3>
-                <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                <p>Clique nos links para ser redirecionado(a) ao WhatsApp.</p>
+                <p>
+                  <b>Administrativo: </b><a target="_blank" href="https://api.whatsapp.com/send?phone=5531986481316">(31) 98648-1316</a><br>
+                  <b>Atendimento: </b><a target="_blank" href="https://api.whatsapp.com/send?phone=5531986480229">(31) 98648-0229</a><br>
+                  <b>Pegadagógico: </b><a target="_blank" href="https://api.whatsapp.com/send?phone=5531984919154">(31) 98491-9154</a><br>
+                  <b>Secretaria: </b><a target="_blank" href="https://api.whatsapp.com/send?phone=5531984811070">(31) 98481-1070</a><br>
+                  <b>TI: </b><a target="_blank" href="https://api.whatsapp.com/send?phone=5531984219845">(31) 98421-9845</a><br>
+              </p>
               </div>
             </div>
           </div>
@@ -149,7 +162,7 @@
   </section><!-- End Contact Section -->
 
   <!-- ======= Cta Section ======= -->
-  <section id="cta" class="cta">
+  <!-- <section id="cta" class="cta">
     <div class="container" data-aos="zoom-in">
 
       <div class="text-center">
@@ -159,10 +172,11 @@
       </div>
 
     </div>
-  </section><!-- End Cta Section -->
+  </section> -->
+  <!-- End Cta Section -->
 
   <!-- ======= Doctors Section ======= -->
-  <section id="doctors" class="doctors section-bg">
+  <!-- <section id="doctors" class="doctors section-bg">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
@@ -247,7 +261,8 @@
       </div>
 
     </div>
-  </section><!-- End Doctors Section -->
+  </section> -->
+  <!-- End Doctors Section -->
 
   <!-- ======= Counts Section ======= -->
   <!-- <section id="counts" class="counts">
@@ -437,7 +452,7 @@
   <!-- End Appointment Section -->
 
   <!-- ======= Testimonials Section ======= -->
-  <section id="testimonials" class="testimonials">
+  <!-- <section id="testimonials" class="testimonials">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
@@ -459,7 +474,7 @@
               <h3>Saul Goodman</h3>
               <h4>Ceo &amp; Founder</h4>
             </div>
-          </div><!-- End testimonial item -->
+          </div>
 
           <div class="swiper-slide">
             <div class="testimonial-item">
@@ -472,7 +487,7 @@
               <h3>Sara Wilsson</h3>
               <h4>Designer</h4>
             </div>
-          </div><!-- End testimonial item -->
+          </div>
 
           <div class="swiper-slide">
             <div class="testimonial-item">
@@ -485,7 +500,7 @@
               <h3>Jena Karlis</h3>
               <h4>Store Owner</h4>
             </div>
-          </div><!-- End testimonial item -->
+          </div>
 
           <div class="swiper-slide">
             <div class="testimonial-item">
@@ -498,7 +513,7 @@
               <h3>Matt Brandon</h3>
               <h4>Freelancer</h4>
             </div>
-          </div><!-- End testimonial item -->
+          </div>
 
           <div class="swiper-slide">
             <div class="testimonial-item">
@@ -511,17 +526,18 @@
               <h3>John Larson</h3>
               <h4>Entrepreneur</h4>
             </div>
-          </div><!-- End testimonial item -->
+          </div>
 
         </div>
         <div class="swiper-pagination"></div>
       </div>
 
     </div>
-  </section><!-- End Testimonials Section -->
+  </section> -->
+  <!-- End Testimonials Section -->
 
   <!-- ======= Pricing Section ======= -->
-  <section id="pricing" class="pricing">
+  <!-- <section id="pricing" class="pricing">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
@@ -603,7 +619,8 @@
       </div>
 
     </div>
-  </section><!-- End Pricing Section -->
+  </section> -->
+  <!-- End Pricing Section -->
 
   <!-- ======= Gallery Section ======= -->
   <section id="gallery" class="gallery">
@@ -611,7 +628,7 @@
 
       <div class="section-title">
         <h2>Galeria</h2>
-        <p>Confira as fotos dos nossos últimos eventos!</p>
+        <p>Veja imagens de nossas instalações.</p>
       </div>
 
       <div class="gallery-slider swiper-container">

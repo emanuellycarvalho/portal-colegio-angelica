@@ -1,7 +1,7 @@
 @extends('templates.admin')
 
 @section('place') <i class="fa fa-home"></i> Home @endsection('place')
-@section('title') Home @endsection('title')
+@section('title') Admin PCA @endsection('title')
 
 
 @section('content')
@@ -43,7 +43,8 @@
         </div> -->
 <!-- info boxes end -->
 
-<div class="row">
+<!-- calendar session -->
+<!-- <div class="row">
   <div class="col-md-12 portlets">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -55,17 +56,14 @@
 
       </div><br><br><br>
       <div class="panel-body">
-        <!-- Widget content -->
-
-        <!-- Below line produces calendar. I am using FullCalendar plugin. -->
         <div id="calendar"></div>
 
       </div>
     </div>
 
   </div>
-</div>
-
+</div> -->
+<!-- calendar session end -->
 
 <div class="row">
   <div class="col-lg-9 col-md-12">
